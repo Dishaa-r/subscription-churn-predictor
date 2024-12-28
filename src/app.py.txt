@@ -1,0 +1,27 @@
+from flask import Flask, render_template, request
+from model import predict_churn
+
+app = Flask(__name__)
+
+# Home route for the form
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        # Collect form data
+        customer_data = {
+            "age": int(request.form["age"]),
+            "subscription_duration": int(request.form["subscription_duration"]),
+            "interaction_frequency": int(request.form["interaction_frequency"]),
+            "activity_score": float(request.form["activity_score"])
+        }
+        
+        # Get prediction from model
+        churn_probability, suggestion = predict_churn(customer_data)
+        
+        # Render results page with prediction and suggestion
+        return render_template("results.html", churn_probability=churn_probability, suggestion=suggestion)
+    
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)

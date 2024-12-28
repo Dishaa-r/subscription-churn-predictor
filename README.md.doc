@@ -1,0 +1,168 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Text To Word</title></head><body><h2><strong>Subscription Churn Predictor</strong></h2>
+<p>A lightweight SaaS tool that predicts the likelihood of customer churn for subscription-based businesses. This tool helps businesses identify customers at risk and take proactive actions to retain them.</p>
+<hr>
+<h3><strong>Features</strong></h3>
+<ul>
+<li><strong>Churn Prediction:</strong> Enter customer data and get a probability score for their likelihood to churn.</li>
+<li><strong>Actionable Insights:</strong> Receive suggestions on how to retain customers based on the churn probability.</li>
+<li><strong>User-Friendly Interface:</strong> Simple form-based web app for input and results.</li>
+<li><strong>Lightweight ML Model:</strong> Uses a basic decision-tree algorithm for predictions.</li>
+</ul>
+<hr>
+<h3><strong>How It Works</strong></h3>
+<ol>
+<li>Users input basic customer data (age, subscription duration, interaction frequency, and activity score) through a web form.</li>
+<li>The system calculates the churn probability using a pre-trained Decision Tree Classifier.</li>
+<li>The results page displays:
+<ul>
+<li>Churn probability percentage.</li>
+<li>Suggested actions to retain the customer.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong style="font-size: 14px;">Tech Stack</strong></h3>
+<ul>
+<li><strong>Backend:</strong> Flask (Python)</li>
+<li><strong>Frontend:</strong> HTML/CSS (with optional Bootstrap for styling)</li>
+<li><strong>Machine Learning:</strong> Scikit-learn</li>
+<li><strong>Database (optional):</strong> SQLite</li>
+</ul>
+<hr>
+<h3><strong>Setup Instructions</strong></h3>
+<p>Follow these steps to set up the project on your local machine:</p>
+<ol>
+<li>
+<p><strong>Clone the Repository</strong></p>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">bash</div>
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center">
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/Dishaa-r/subscription-churn-predictor.git
+<span class="hljs-built_in">cd</span> subscription-churn-predictor
+</code></div>
+</div>
+</li>
+<li>
+<p><strong>Install Dependencies</strong> Use <code>pip</code> to install the required libraries:</p>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">bash</div>
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center">
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">pip install -r requirements.txt
+</code></div>
+</div>
+</li>
+<li>
+<p><strong>Run the Application</strong> Start the Flask development server:</p>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">bash</div>
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center">
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">python src/app.py
+</code></div>
+</div>
+</li>
+<li>
+<p><strong>Access the Web App</strong> Open your browser and navigate to <code>http://127.0.0.1:5000</code>.</p>
+</li>
+</ol>
+<hr>
+<h3><strong>Project Structure</strong></h3>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">graphql</div>
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center">
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr">
+<ul>
+<li><code class="!whitespace-pre hljs language-graphql"><span class="hljs-keyword">subscription</span>-churn-predictor/
+│
+</code>
+<ul>
+<li><code class="!whitespace-pre hljs language-graphql">├── README.md             <span class="hljs-comment"># Documentation</span>
+</code></li>
+<li><code class="!whitespace-pre hljs language-graphql">├── requirements.txt      <span class="hljs-comment"># Dependencies</span>
+</code></li>
+<li><code class="!whitespace-pre hljs language-graphql">├── src/
+│ </code>
+<ul>
+<li><code class="!whitespace-pre hljs language-graphql">  ├── app.py            <span class="hljs-comment"># Main Flask app</span>
+│ </code></li>
+<li><code class="!whitespace-pre hljs language-graphql">  ├── model.py          <span class="hljs-comment"># Churn prediction logic</span>
+│ </code></li>
+<li><code class="!whitespace-pre hljs language-graphql">  ├── utils.py          <span class="hljs-comment"># Helper functions (if any)</span>
+│
+</code></li>
+</ul>
+</li>
+<li><code class="!whitespace-pre hljs language-graphql">├── templates/            <span class="hljs-comment"># HTML templates</span>
+│ </code>
+<ul>
+<li><code class="!whitespace-pre hljs language-graphql">  ├── index.html        <span class="hljs-comment"># Input form</span>
+│ </code></li>
+<li><code class="!whitespace-pre hljs language-graphql">  ├── results.html      <span class="hljs-comment"># Results display</span>
+│
+</code></li>
+</ul>
+</li>
+<li><code class="!whitespace-pre hljs language-graphql">├── static/               <span class="hljs-comment"># Static files (CSS, images, etc.)</span>
+│ </code>
+<ul>
+<li><code class="!whitespace-pre hljs language-graphql">  ├── style.css         <span class="hljs-comment"># Styling for the app</span>
+</code></li>
+</ul>
+</li>
+<li><code class="!whitespace-pre hljs language-graphql">│
+└── tests/
+</code>
+<ul>
+<li><code class="!whitespace-pre hljs language-graphql">    ├── test_app.py       <span class="hljs-comment"># Unit tests</span>
+</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<h3><strong>Dependencies</strong></h3>
+<p>The project uses the following Python libraries:</p>
+<ul>
+<li>Flask</li>
+<li>Scikit-learn</li>
+</ul>
+<p>Install them with:</p>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">bash</div>
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center">
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">pip install -r requirements.txt
+</code></div>
+</div>
+<hr>
+<h3><strong>Future Improvements</strong></h3>
+<ul>
+<li>Add support for bulk data uploads (e.g., via CSV).</li>
+<li>Allow users to save and retrieve past predictions.</li>
+<li>Enhance prediction accuracy with more advanced machine learning models.</li>
+<li>Add role-based authentication for multiple users.</li>
+</ul>
+<hr>
+<h3><strong>License</strong></h3>
+<p>This project is licensed under the MIT License. See the LICENSE file for details.</p></body></html>
